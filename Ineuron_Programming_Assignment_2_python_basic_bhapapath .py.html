@@ -1,0 +1,83 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[ ]:
+
+
+#1. Write a Python program to convert kilometers to miles?
+#2. Write a Python program to convert Celsius to Fahrenheit?
+#3. Write a Python program to display calendar?
+#4. Write a Python program to solve quadratic equation?
+#5. Write a Python program to swap two variables without temp variable?
+
+
+# In[ ]:
+
+
+#1. Write a Python program to convert kilometers to miles?
+#Define the variable for storing the value of km and accepting the input from the user
+km = float (input ("Enter km: "))  
+#Define and store the conversion factor into the variable.
+conversion_ratio_1 = 0.62137119  
+#convert km into miles
+miles = km * conversion_ratio_1  
+print ("Convert kilometers to miles: ", miles)  
+
+
+# In[ ]:
+
+
+#2. Write a Python program to convert Celsius to Fahrenheit?
+celsius = float (input ("Enter Celsius: "))  
+conversion_ratio_2 = 0.62137119  
+fahrenheit = celsius * conversion_ratio_1  
+print ("Celsius to Fahrenheit: ", fahrenheit)  
+
+
+# In[ ]:
+
+
+#3. Write a Python program to display calendar?
+import calendar  
+# Enter the month and year  
+yy = int(input("Enter year: "))  
+mm = int(input("Enter month: "))  
+# display the calendar  
+print(calendar.month(yy,mm))  
+
+
+# In[ ]:
+
+
+#4. Write a Python program to solve quadratic equation?
+# import complex math module  
+import cmath  
+a = float(input('Enter a: '))  
+b = float(input('Enter b: '))  
+c = float(input('Enter c: ')) 
+#equationa is ax**2 + bx + c = 0
+#discriminant is b**2 − 4ac
+d = (b**2) - (4*a*c)  
+# find two solutions  
+sol1 = (-b-cmath.sqrt(d))/(2*a)  
+sol2 = (-b+cmath.sqrt(d))/(2*a)  
+print('The solution are {0} and {1}'.format(sol1,sol2))   
+
+
+# In[5]:
+
+
+#5. Write a Python program to swap two variables without temp variable?
+a = "first variables"
+b = "second variables"
+list_original = [a, b]
+print("Before swapping: ", list_original)
+list_swap = list_original[::-1] 
+print("Before swapping: ", list_swap)
+
+
+# In[ ]:
+
+
+
+
