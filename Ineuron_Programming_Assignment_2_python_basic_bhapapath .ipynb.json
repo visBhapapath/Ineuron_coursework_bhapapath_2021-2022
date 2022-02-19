@@ -1,0 +1,141 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "e5eae21f",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#1. Write a Python program to convert kilometers to miles?\n",
+    "#2. Write a Python program to convert Celsius to Fahrenheit?\n",
+    "#3. Write a Python program to display calendar?\n",
+    "#4. Write a Python program to solve quadratic equation?\n",
+    "#5. Write a Python program to swap two variables without temp variable?\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "9cf053bb",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#1. Write a Python program to convert kilometers to miles?\n",
+    "#Define the variable for storing the value of km and accepting the input from the user\n",
+    "km = float (input (\"Enter km: \"))  \n",
+    "#Define and store the conversion factor into the variable.\n",
+    "conversion_ratio_1 = 0.62137119  \n",
+    "#convert km into miles\n",
+    "miles = km * conversion_ratio_1  \n",
+    "print (\"Convert kilometers to miles: \", miles)  "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "1ecf1605",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#2. Write a Python program to convert Celsius to Fahrenheit?\n",
+    "celsius = float (input (\"Enter Celsius: \"))  \n",
+    "conversion_ratio_2 = 0.62137119  \n",
+    "fahrenheit = celsius * conversion_ratio_1  \n",
+    "print (\"Celsius to Fahrenheit: \", fahrenheit)  "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "b144ebab",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#3. Write a Python program to display calendar?\n",
+    "import calendar  \n",
+    "# Enter the month and year  \n",
+    "yy = int(input(\"Enter year: \"))  \n",
+    "mm = int(input(\"Enter month: \"))  \n",
+    "# display the calendar  \n",
+    "print(calendar.month(yy,mm))  "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "a1bf8a47",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#4. Write a Python program to solve quadratic equation?\n",
+    "# import complex math module  \n",
+    "import cmath  \n",
+    "a = float(input('Enter a: '))  \n",
+    "b = float(input('Enter b: '))  \n",
+    "c = float(input('Enter c: ')) \n",
+    "#equationa is ax**2 + bx + c = 0\n",
+    "#discriminant is b**2 − 4ac\n",
+    "d = (b**2) - (4*a*c)  \n",
+    "# find two solutions  \n",
+    "sol1 = (-b-cmath.sqrt(d))/(2*a)  \n",
+    "sol2 = (-b+cmath.sqrt(d))/(2*a)  \n",
+    "print('The solution are {0} and {1}'.format(sol1,sol2))   "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "9ea6bb94",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Before swapping:  ['first variables', 'second variables']\n",
+      "Before swapping:  ['second variables', 'first variables']\n"
+     ]
+    }
+   ],
+   "source": [
+    "#5. Write a Python program to swap two variables without temp variable?\n",
+    "a = \"first variables\"\n",
+    "b = \"second variables\"\n",
+    "list_original = [a, b]\n",
+    "print(\"Before swapping: \", list_original)\n",
+    "list_swap = list_original[::-1] \n",
+    "print(\"Before swapping: \", list_swap)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "c98fce1a",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
