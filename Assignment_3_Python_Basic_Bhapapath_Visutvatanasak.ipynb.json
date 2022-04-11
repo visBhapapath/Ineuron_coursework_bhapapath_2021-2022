@@ -1,0 +1,173 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "c45225ee",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "input a number: 0\n",
+      "It is zero\n"
+     ]
+    }
+   ],
+   "source": [
+    "#1. Write a python program to check if a number is positive, negative or zero?\n",
+    "num = float(input(\"input a number: \"))\n",
+    "if num > 0:\n",
+    "    print(\"It is positive number\")\n",
+    "elif num == 0:\n",
+    "    print(\"It is zero\")\n",
+    "else:\n",
+    "    print(\"It is a negative number\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "7b9722aa",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "enter a number: 4\n",
+      "4 is even number\n"
+     ]
+    }
+   ],
+   "source": [
+    "#2. Write a python program to check if a number is odd or even?\n",
+    "num = int(input(\"enter a number: \"))\n",
+    "if(num%2)== 0:\n",
+    "    print(\"{0} is even number\".format(num))\n",
+    "else:\n",
+    "    print(\"{0} is odd number\".format(num))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "7adb25c8",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "enter a year: 9999\n",
+      "9999 is not a leap year\n"
+     ]
+    }
+   ],
+   "source": [
+    "#3. Write a python program to check leap year?\n",
+    "year = int(input(\"enter a year: \"))\n",
+    "if (year%400 == 0) and (year% 100 ==0):\n",
+    "        print(\"{0} is a leap year\".format(year))\n",
+    "else:\n",
+    "    print(\"{0} is not a leap year\".format(year))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "f45ed76e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#4. Write a python program to check prime number?\n",
+    "num = int(input(\"enter a number: \"))\n",
+    "#A flag variable, in its simplest form, is a variable you define to have one value until some condition is true\n",
+    "flag = Flase\n",
+    "if numer >1:\n",
+    "    for i in range(2, num):\n",
+    "        if (num % i) == 0:\n",
+    "            flag  True\n",
+    "        break\n",
+    "if flag\n",
+    "    print(num, \"is not a prime number\")\n",
+    "else:\n",
+    "    print(num, \"is a prime number\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "0e7ff743",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Prime numbers between 900 and 1000 are:\n",
+      "907\n",
+      "911\n",
+      "919\n",
+      "929\n",
+      "937\n",
+      "941\n",
+      "947\n",
+      "953\n",
+      "967\n",
+      "971\n",
+      "977\n",
+      "983\n",
+      "991\n",
+      "997\n"
+     ]
+    }
+   ],
+   "source": [
+    "#5. Write a python program to print all prime number in an internval of 1-10000?\n",
+    "lower = 900\n",
+    "upper = 1000\n",
+    "\n",
+    "print(\"Prime numbers between\", lower, \"and\", upper, \"are:\")\n",
+    "\n",
+    "for num in range(lower, upper + 1):\n",
+    "   if num > 1:\n",
+    "       for i in range(2, num):\n",
+    "           if (num % i) == 0:\n",
+    "               break\n",
+    "       else:\n",
+    "           print(num)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "9c460187",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
