@@ -1,0 +1,189 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "e2bd3d0f",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#1. write a python program to find the factorial of a number?\n",
+    "#The factorial of a number is the product of all the integers from 1 to that number. For example, the factorial of 6 is 1*2*3*4*5*6 = 720 . \n",
+    "#Factorial is not defined for negative numbers, \n",
+    "#and the factorial of zero is one, 0! = 1\n",
+    "num = int(input(\"Enter a number: \"))    \n",
+    "factorial = 1    \n",
+    "if num < 0:    \n",
+    "   print(\" Factorial does not exist for negative numbers\")    \n",
+    "elif num == 0:    \n",
+    "   print(\"The factorial of 0 is 1\")    \n",
+    "else:    \n",
+    "   for i in range(1,num + 1):    \n",
+    "       factorial = factorial*i    \n",
+    "   print(\"The factorial of\",num,\"is\",factorial) "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "b41a08ae",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#2. write a python program to display the multiplication table?\n",
+    "number = int(input (\"Enter the number of which the user wants to print the multiplication table: \"))      \n",
+    "count = 1    \n",
+    "print (\"The Multiplication Table of: \", number)    \n",
+    "while count <= 10:    \n",
+    "    number = number * 1    \n",
+    "    print (number, 'x', i, '=', number * count)    \n",
+    "    count += 1    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "37fd2d6c",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#3. write a python program to print the fibonacci sequence?\n",
+    "#The Fibonacci sequence is a series of numbers where a number is the addition of \n",
+    "#the last two numbers, starting with 0, and 1. \n",
+    "nterms = int(input(\"How many terms? \"))\n",
+    "n1, n2 = 0, 1\n",
+    "count = 0\n",
+    "\n",
+    "if nterms <= 0:\n",
+    "   print(\"Please enter a positive integer\")\n",
+    "elif nterms == 1:\n",
+    "   print(\"Fibonacci sequence upto\",nterms,\":\")\n",
+    "   print(n1)\n",
+    "# generate fibonacci sequence\n",
+    "else:\n",
+    "   print(\"Fibonacci sequence:\")\n",
+    "   while count < nterms:\n",
+    "       print(n1)\n",
+    "       nth = n1 + n2\n",
+    "       # update values\n",
+    "       n1 = n2\n",
+    "       n2 = nth\n",
+    "       count += 1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "a97c48da",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#4. write a python program check armstrong number?\n",
+    "#An Armstrong number is a number that is the sum of its own digits each raised to the power of the number of digits. \n",
+    "num = int(input(\"Enter a number: \"))\n",
+    "\n",
+    "sum = 0\n",
+    "\n",
+    "temp = num\n",
+    "while temp > 0:\n",
+    "   digit = temp % 10\n",
+    "   sum += digit ** 3\n",
+    "   temp //= 10\n",
+    "\n",
+    "if num == sum:\n",
+    "   print(num,\"is an Armstrong number\")\n",
+    "else:\n",
+    "   print(num,\"is not an Armstrong number\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "1426eaf4",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#5. write a python program to find armstrong number in an interval?\n",
+    "\n",
+    "\n",
+    "lower = 100\n",
+    "upper = 2000\n",
+    "\n",
+    "for num in range(lower, upper + 1):\n",
+    "\n",
+    "   order = len(str(num))\n",
+    "    \n",
+    "   sum = 0\n",
+    "\n",
+    "   temp = num\n",
+    "   while temp > 0:\n",
+    "       digit = temp % 10\n",
+    "       sum += digit ** order\n",
+    "       temp //= 10\n",
+    "\n",
+    "   if num == sum:\n",
+    "       print(num)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "8d785857",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The sum is 136\n"
+     ]
+    }
+   ],
+   "source": [
+    "#6. write a python program to find the sum of natural numbers\n",
+    "#natural numbers are numbers worth more than zero\n",
+    "\n",
+    "num = 16\n",
+    "\n",
+    "if num < 0:\n",
+    "   print(\"Enter a positive number\")\n",
+    "else:\n",
+    "   sum = 0\n",
+    "   # use while loop to iterate until zero\n",
+    "   while(num > 0):\n",
+    "       sum += num\n",
+    "       num -= 1\n",
+    "   print(\"The sum is\", sum)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "7af5d80f",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
