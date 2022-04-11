@@ -1,0 +1,166 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "f250d201",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#1. write a python program to find sum of array?\n",
+    "#looping through the array and add the value of the element in each iteration to variable sum.\n",
+    "\n",
+    "num_array = int(input(\"Enter number of elements : \"))\n",
+    "num_array = list(map(int, input(\"\\nEnter the numbers : \").strip().split()))[:n]\n",
+    "\n",
+    "sum = 0;    \n",
+    "     \n",
+    "#Loop through the array to calculate sum of elements    \n",
+    "for i in range(0, len(num_array)):    \n",
+    "   sum = sum + num_array[i];    \n",
+    "     \n",
+    "print(\"Sum of all the elements of an array: \" + str(sum));   "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "6a90ad13",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#2. write a python program to find largest element in an array?\n",
+    "array= [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 14, 4, 8, 9]\n",
+    "max = array[0];    \n",
+    "for i in range(0, len(array)):    \n",
+    "    if(array[i] > max):    \n",
+    "       max = array[i];    \n",
+    "           \n",
+    "print(\"Largest element present in given array: \" + str(max))\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "65d0b7e8",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#3. write a python program for array rotation?\n",
+    "def rotateArray(arr, n, d):\n",
+    "    temp = []\n",
+    "    i = 0\n",
+    "    while (i < d):\n",
+    "        temp.append(arr[i])\n",
+    "        i = i + 1\n",
+    "    i = 0\n",
+    "    while (d < n):\n",
+    "        arr[i] = arr[d]\n",
+    "        i = i + 1\n",
+    "        d = d + 1\n",
+    "    arr[:] = arr[: i] + temp\n",
+    "    return arr\n",
+    " \n",
+    " \n",
+    "arr= [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 14, 4, 8, 9]\n",
+    "\n",
+    "print(\"Array after left rotation is: \", end=' ')\n",
+    "print(rotateArray(arr, len(arr), 2))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "0dcc27c1",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#4. write a python program to split the array and add the first part to the end?\n",
+    "\n",
+    "def SplitAndAdd(A, length, rotation):\n",
+    " \n",
+    "    \n",
+    "    tmp = [ 0 for i in range(length * 2)]\n",
+    " \n",
+    "    for i in range(length):\n",
+    "        tmp[i] = A[i]\n",
+    "        tmp[i + length] = A[i]\n",
+    " \n",
+    "    for i in range(rotation,\n",
+    "                   rotation + length, 1):\n",
+    "        A[i - rotation] = tmp[i];\n",
+    "      \n",
+    "# Driver code\n",
+    "arr = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 14, 4, 8, 9]\n",
+    "n = len(arr)\n",
+    "position = 2\n",
+    "SplitAndAdd(arr, n, position);\n",
+    "for i in range(n):\n",
+    "    print(arr[i], end = \" \")\n",
+    "print()\n",
+    " "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "4156492e",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "IndentationError",
+     "evalue": "unexpected indent (62328101.py, line 10)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;36m  File \u001b[0;32m\"/var/folders/55/vvjcwvjd77s53w70d8bdxgt40000gn/T/ipykernel_5591/62328101.py\"\u001b[0;36m, line \u001b[0;32m10\u001b[0m\n\u001b[0;31m    print(isMonotonic(A)\u001b[0m\n\u001b[0m    ^\u001b[0m\n\u001b[0;31mIndentationError\u001b[0m\u001b[0;31m:\u001b[0m unexpected indent\n"
+     ]
+    }
+   ],
+   "source": [
+    "#5. write a python program to check if given array is monotonic?\n",
+    "#An array is monotonic if it is either monotone increasing or monotone decreasing.\n",
+    "\n",
+    "#An array nums is monotone increasing if for all i <= j, nums[i] <= nums[j]. An array nums is monotone decreasing if for all i <= j, nums[i] >= nums[j].\n",
+    "def isMonotonic(A):\n",
+    "  \n",
+    "    return (all(A[i] <= A[i + 1] for i in range(len(A) - 1)) or\n",
+    "            all(A[i] >= A[i + 1] for i in range(len(A) - 1)))\n",
+    "  \n",
+    "# Driver code\n",
+    "arr = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 14, 4, 8, 9]\n",
+    "\n",
+    "  print(isMonotonic(A)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "ca8f6f83",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
