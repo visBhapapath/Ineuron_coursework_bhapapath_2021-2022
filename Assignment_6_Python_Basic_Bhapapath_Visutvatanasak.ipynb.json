@@ -1,0 +1,166 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "1e27c9ea",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#1. write a python program to display Fibonacci sequence using recursion?\n",
+    "# The Fibonacci Sequence is the series of numbers: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, The next number is found by adding up \n",
+    "#the two numbers before it\n",
+    "##recursive function (a function that calls itself. def recurse\n",
+    "\n",
+    "num = int(input())\n",
+    "\n",
+    "def recur_fibo(n):  \n",
+    "   if n <= 1:  \n",
+    "       return n  \n",
+    "   else:  \n",
+    "       return(recur_fibo(n-1) + recur_fibo(n-2))  \n",
+    "\n",
+    "if num <= 0:  \n",
+    "   print(\"Enter a positive integer\")  \n",
+    "else:  \n",
+    "   print(\"Fibonacci sequence:\")  \n",
+    "   for i in range(num):  \n",
+    "       print(recur_fibo(i)) "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "4e97505b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#2. write a python program to find factorial of number using recursion?\n",
+    "\n",
+    "num = int(input())\n",
+    "def factorial(x):\n",
+    "    if x == 1:\n",
+    "        return 1\n",
+    "    else:\n",
+    "        return (x * factorial(x-1))\n",
+    "\n",
+    "print(\"The factorial of\", num, \"is\", factorial(num))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "9068517b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#3. write a python program to calculate your body mass index?\n",
+    "#body mass formula-> BMI = kg/m2\n",
+    "\n",
+    "kg = float(input('please type your weight in kilograms: '))\n",
+    "m2 = float(input('please type your height in meters: '))\n",
+    "BMI = kg/m2\n",
+    "print('your BMI is:', BMI)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "9d0aefda",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "your first number: 32\n",
+      "your second number: 32\n",
+      "1.461501637330903e+48\n"
+     ]
+    }
+   ],
+   "source": [
+    "#4. write a python program to calculate the natural logarithm of any number?\n",
+    "import math\n",
+    "\n",
+    "a = float(input('your first number: '))\n",
+    "b = float(input('your second number: '))\n",
+    "print(math.pow(a, b))\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "38cb38ea",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "your number: 9\n",
+      "2025\n"
+     ]
+    }
+   ],
+   "source": [
+    "#5. Write a python program for cube sum of first n natural numbers?\n",
+    "def sumOfSeries(n):\n",
+    "    sum = 0\n",
+    "    for i in range(1, n+1):\n",
+    "        sum +=i*i*i\n",
+    "          \n",
+    "    return sum\n",
+    "  \n",
+    "n = int(input('your number: '))\n",
+    "print(sumOfSeries(n))\n",
+    "  "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "c2caa1d3",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "0fa350bc",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "50e7acad",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
